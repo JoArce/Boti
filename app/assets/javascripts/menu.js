@@ -1,24 +1,26 @@
-$(document).ready(main);
+$(function(){
 
-var contador = 1;
+	var header = document.getElementById('header');
+	var headroom = new Headroom(header);
+	headroom.init();
 
-function main () {
-	$('.menu_bar').click(function(){
-		if (contador == 1) {
-			$('nav').animate({
-				left: '0'
-			});
-			contador = 0;
-		} else {
-			contador = 1;
-			$('nav').animate({
-				left: '-100%'
-			});
+	// menu responsive
+	//calculamos el ancho de la pagina
+
+	var ancho = $(window).width(),
+		enlaces = $('#enlaces'),
+		btnMenu = $('btn-menu'),
+		icono = $('#btn-menu .icono');
+
+		if (ancho < 700) {
+			enlaces.hide();
+			icono.addClass('far-bars');
 		}
-	});
 
-	// Mostramos y ocultamos submenus
-	$('.submenu').click(function(){
-		$(this).children('.children').slideToggle();
-	});
-}
+    btnMenu.on('click', function(e){
+			enlaces.slideToggle();
+			icono.toogleClass('fa-bars');
+			icono.toogleClass('fa-times');
+
+		});
+});
