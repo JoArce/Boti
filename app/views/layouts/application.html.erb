@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BotilleriaRoots</title>
+    <style src="estilo.css" type="text/css"></style>
+    <script src="menu.js" type"javascript"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-sacel=1.0, maximunm-scale=1.0, minimun-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" src="font-awesome.min.css">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="logo">
+      <%= image_tag 'roots.png'%>
+    </div>
+    <div class="container">
+    <header>
+  		<div class="menu_bar">
+  			<a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+  		</div>
+
+  		<nav>
+  			<ul>
+  				<li><a href="<%=roots_inicio_path%>"><span class="icon-house"></span>Inicio</a></li>
+  				<li class="submenu">
+  					<a href="<%=roots_productos_path%>"><span class="icon-rocket"></span>Productos<span class="caret icon-arrow-down6"></span></a>
+  					<ul class="children">
+  						<li><a href="<%=roots_cerveza_path%>">Cerveza<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_licorcrema_path%>">Licor de Crema<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_pisco_path%>">Pisco<span class="icon-dot"></span></a></li>
+  						<li><a href="<%=roots_ron_path%>">Ron <span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_tequila_path%>">Tequila<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_vino_path%>">Vino<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_vodka_path%>">Vodka<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_whisky_path%>">Whisky<span class="icon-dot"></span></a></li>
+              <li><a href="<%=roots_otros_path%>">Otros<span class="icon-dot"></span></a></li>
+            </ul>
+  				</li>
+  				<li><a href="<%=roots_carrito_path%>"><span class="icon-earth"></span>Como Comprar</a></li>
+  				<li><a href="#"><span class="icon-mail"></span>Contacto</a></li>
+  			</ul>
+  		</nav>
+  	</header>
+  </div>
+    <%= yield %>
+
+  </body>
+</html>
