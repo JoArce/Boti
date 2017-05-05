@@ -1,2 +1,32 @@
-<h1>Roots#productos</h1>
-<p>Find me in app/views/roots/productos.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.scss">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Nuestros Productos</h2>
+       <div class="col-md-4">
+         <div class="thumbnail">
+           <%= image_tag "escudo.jpg", :alt => "Cerveza", :class =>"img-responsive"%>
+           <h4><a href="<%=roots_cerveza_path%>">Cerveza</a></h4>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="thumbail">
+           <%= image_tag "120 botellon cs.jpg", :alt => "Vino", :class =>"img-responsive"%>
+           <h4><a href="<%=roots_vino_path%>">Vino</a></h4>
+         </div>
+       </div>
+       <div class="col-md-4">
+         <div class="thumbail">
+           <%= image_tag "Campanario.jpg", :alt => "Pisco", :class =>"img-responsive"%>
+           <h4><a href="<%=roots_pisco_path%>">Pisco</a></h4>
+         </div>
+       </div>
+    </div>
+
+  </body>
+</html>
