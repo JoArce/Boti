@@ -14,7 +14,12 @@ background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, F
 .img-responsive{
  display: block;
  width: 300px;
- height: 300px;
+ height: 395px;
+}
+
+div .mapa{
+  display: block;
+  align-content: center;
 }
 
 .thumbnail {
@@ -161,7 +166,7 @@ h4{
   font-size: 25px;
   line-height: 1.5em;
   text-align: center;
-  color: black;
+  color: white;
 }
 p{
   text-align: center;
