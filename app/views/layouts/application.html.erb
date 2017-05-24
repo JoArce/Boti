@@ -14,18 +14,17 @@
   </head>
 
   <body>
+
     <header>
-         <button class="toggle-nav">
-               <span>></span>
-         </button>
-         <ul class="nav">
-               <li class="loud"><a href="<%= roots_inicio_path %>"> Inicio </a></li>
-               <li class="loud"><a href="<%= roots_productos_path %>"> Productos </a></li>
-               <li class="loud"><a href="<%= roots_contacto_path %>"> Contacto </a></li>
-               <li class="loud"><a href="<%= roots_ayuda_path %>"> Ayuda </a></li>
-               <li class="loud"><a href="<%= roots_carrito_path %>"> Carro de Compras </a></li>
-         </ul>
-   </header>
+	<nav>
+		<ul>
+			<li><a href="<%= roots_inicio_path%>">Inicio</a></li>
+			<li><a href="<%= roots_productos_path%>">Productos</a></li>
+			<li><a href="<%= roots_contacto_path%>">Contacto</a></li>
+      <li style="text-align: right"><a>Botilleria Roots</a></li>
+		</ul>
+	</nav>
+</header>
     <%= yield %>
 
   </body>
